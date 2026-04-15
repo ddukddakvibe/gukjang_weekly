@@ -37,3 +37,6 @@ jobs:
           # 변경사항 없으면 커밋 생략
           git diff --staged --quiet || git commit -m "📈 주간 경제뉴스 업데이트 $(date +'%Y-%m-%d')"
           git push
+
+      - name: Netlify 배포 트리거
+        run: curl -s -X POST https://api.netlify.com/build_hooks/69df91575ea4a01a5cb50bd0
