@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국장 주간 경제 스크랩</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">📊 국장 위클리</div>
+      <div class="header-sub">매주 월요일 업데이트되는 국내 주식시장 뉴스 스크랩</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="empty-state">
+      <div class="icon">📰</div>
+      <h2>첫 번째 주간 리포트 준비 중</h2>
+      <p>
+        GitHub Actions가 매주 월요일 오전 9시에 자동으로 뉴스를 수집합니다.<br>
+        수동으로 실행하려면 아래 명령어를 입력하세요:
+      </p>
+      <br>
+      <p>
+        <code>pip install -r requirements.txt</code><br><br>
+        <code>CLAUDE_API_KEY=your_key python scripts/collect.py</code>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>자동 수집: 한국경제 · 매일경제 · 연합뉴스 · 이데일리 · 머니투데이</p>
+    <p>매주 월요일 오전 9시 자동 업데이트</p>
+  </footer>
+</body>
+</html>
