@@ -43,5 +43,9 @@ jobs:
           git diff --staged --quiet || git commit -m "📈 주간 경제뉴스 업데이트 $(date +'%Y-%m-%d')"
           git push
 
-      - name: Netlify 배포 트리거
-        run: curl -s -X POST https://api.netlify.com/build_hooks/69df91575ea4a01a5cb50bd0
+      - name: Netlify 배포
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npm install -g netlify-cli --silent
+          netlify deploy --prod --dir . --auth $NETLIFY_AUTH_TOKEN --site cf54d193-5877-4282-b71d-ee41cabec6aa
